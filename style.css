@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  background-image: url("img/papuru-Back-1.png");
+  background-size: cover;    /* PC・スマホ対応 */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+}
+
+#wrapper {
+  position: relative;  /* キャラ・コメントの相対基準 */
+  display: flex;       /* 要素をflex（柔軟）配置にする */
+  flex-direction: column;  /* 要素を縦に並べる */
+  align-items: center;     /* 横方向中央揃え */
+  min-height: 100vh;       /* スマホで下切れ防止 */
+  width: 100%;
+}
+
+#character-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#character-block {
+  position: absolute; /* 他の要素と無関係に、画面上の絶対位置に配置される */
+  margin-top: -200px; /* キャラ単体の位置を自由に調整可能 */
+  display: flex;
+  justify-content: center;
+}
+/* キャラ位置 切替クラス */
+.character-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.character-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.character-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+h1 {
+  position: absolute;
+  top: 20px;    /*タイトル位置*/
+  text-align: center;
+  color: white;
+  font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  margin: 0;
+  border-radius: 8px;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h2#charName {
+  position: absolute;
+  top: 175px;   /*キャラ名の位置*/
+  text-align: center;
+  color: black;
+  background-color: #f9f9c5;
+  font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
+  padding: 5px 20px;
+  margin: 0 auto;
+  border-radius: 999px;
+  border: 2px solid orange;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+
+#comment {
+  margin-top: 150px;  /*コメントの位置調整*/
+  padding: 10px 20px;
+  font-size: 24px;
+  color: white;
+  font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+#button-area {
+  position: absolute;
+  bottom: 0vh;  /* ← 下からの距離を指定 */
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin-bottom: 200px;
+  padding: 10px 50px;
+  font-size: 40px;
+  border: 6px solid #888888;
+  font-weight: bold;
+  font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
+}
+#fixed-message {
+  position: absolute;         /* ← 他の要素と独立配置 */
+  bottom: 5vh;     /* メッセージの位置 */
+  left: 50%;                  /* ← 中央揃え */
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);  /* 半透明の黒背景 */
+  color: yellow;
+  padding: 10px 20px;
+  font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
+  font-size: 20px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+/*121*/

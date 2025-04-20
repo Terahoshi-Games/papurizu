@@ -26,7 +26,7 @@ body {
 }
 #character-block {
   position: absolute; /* 他の要素と無関係に、画面上の絶対位置に配置される */
-  margin-top: -200px; /* キャラ単体の位置を自由に調整可能 */
+  margin-top: -150px; /* キャラ単体の位置を自由に調整可能 */
   display: flex;
   justify-content: center;
 }
@@ -50,6 +50,7 @@ body {
 h1 {
   position: absolute;
   top: 20px;    /*タイトル位置*/
+  white-space: nowrap;  /* ← 改行を防ぐ */
   text-align: center;
   color: white;
   font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
@@ -64,7 +65,7 @@ h1 {
 
 h2#charName {
   position: absolute;
-  top: 175px;   /*キャラ名の位置*/
+  top: 165px;   /*キャラ名の位置*/
   text-align: center;
   color: black;
   background-color: #f9f9c5;
@@ -79,31 +80,37 @@ h2#charName {
 }
 
 #comment {
-  margin-top: 150px;  /*コメントの位置調整*/
+  margin-top: 225px;  /*コメントの位置調整*/
   padding: 10px 20px;
   font-size: 24px;
   color: white;
   font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
   background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 8px;
   width: 100%;
   text-align: center;
+  max-width: 90vw;         /* ← 横幅制限（スマホ対策） */
+  word-break: keep-all;    /* ← 不自然な改行防止 */
 }
 
 #button-area {
   position: absolute;
-  bottom: 0vh;  /* ← 下からの距離を指定 */
+  bottom: -10vh;  /* ← 下からの距離を指定 */
   display: flex;
   justify-content: center;
 }
 
 button {
   margin-bottom: 200px;
-  padding: 10px 50px;
+  padding: 10px 20px;
   font-size: 40px;
   border: 6px solid #888888;
   font-weight: bold;
   font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
+  border-radius: 16px;   /* ← ボタンの角を丸くする */
+  width: 240px;          /* ← ボタンの横幅を固定 */
+  text-align: center;    /* ← テキストを中央に揃える（念のため） */
+  box-sizing: border-box;  /* ← これを追加 */
+  white-space: nowrap;  /* ← テキストの自動改行を防ぐ */
 }
 #fixed-message {
   position: absolute;         /* ← 他の要素と独立配置 */
@@ -116,6 +123,26 @@ button {
   font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
   font-size: 20px;
   border-radius: 8px;
-  white-space: nowrap;
+  white-space: nowrap;  
 }
-/*121*/
+.purple {
+  color: #ee82ee;  /* 明るめのパープル（Orchid） */
+}
+#version {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 12px;
+  color: black;
+  font-family: sans-serif;
+}
+#click-indicator {
+  position: absolute;
+  bottom: 11vh;      /* ●●●の位置調整 */ 
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: yellow;
+  font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
+}
+/*148/

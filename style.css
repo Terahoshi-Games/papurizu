@@ -71,7 +71,9 @@ h1 {
 
 h2#charName {
   position: absolute;
-  top: 140px;   /*キャラ名の位置*/
+  /* top: 140px;  */  /*キャラ名の位置*/
+  /* 修正後（h2#charName内） */
+  top: 20vh;  /*下げると上がる*/
   text-align: center;
   color: black;
   background-color: #f9f9c5;
@@ -100,13 +102,13 @@ h2#charName {
 
 #button-area {
   position: absolute;
-  bottom: -12vh;  /* ← 下からの距離を指定 */
+  bottom: 12vh;  /* ← 下からの距離を指定 */
   display: flex;
   justify-content: center;
 }
 
 button {
-  margin-bottom: 200px;
+  margin-bottom: 0px;  /*押し上げ防止で200→０へ*/
   padding: 10px 20px;
   font-size: 40px;
   border: 6px solid #888888;
@@ -151,4 +153,4 @@ button {
   color: yellow;
   font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
 }
-/*154/
+/*156/

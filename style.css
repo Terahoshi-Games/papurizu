@@ -32,7 +32,7 @@ body {
 }
 #character-block {
   position: absolute; /* 他の要素と無関係に、画面上の絶対位置に配置される */
-  margin-top: -140px; /* キャラ単体の位置を自由に調整可能 */
+  margin-top: -132px; /* キャラの位置調整 */
   display: flex;
   justify-content: center;
 }

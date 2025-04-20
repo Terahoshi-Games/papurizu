@@ -100,7 +100,7 @@ h2#charName {
 
 #button-area {
   position: absolute;
-  bottom: 11vh;  /* ← 下からの距離を指定 */
+  bottom: calc(11vh + 6px);  /* ← 下からの距離を指定 */
   display: flex;
   justify-content: center;
 }

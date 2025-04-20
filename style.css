@@ -32,7 +32,7 @@ body {
 }
 #character-block {
   position: absolute; /* 他の要素と無関係に、画面上の絶対位置に配置される */
-  margin-top: -150px; /* キャラ単体の位置を自由に調整可能 */
+  margin-top: -140px; /* キャラ単体の位置を自由に調整可能 */
   display: flex;
   justify-content: center;
 }
@@ -71,7 +71,7 @@ h1 {
 
 h2#charName {
   position: absolute;
-  top: 165px;   /*キャラ名の位置*/
+  top: 140px;   /*キャラ名の位置*/
   text-align: center;
   color: black;
   background-color: #f9f9c5;
@@ -100,7 +100,7 @@ h2#charName {
 
 #button-area {
   position: absolute;
-  bottom: -10vh;  /* ← 下からの距離を指定 */
+  bottom: -12vh;  /* ← 下からの距離を指定 */
   display: flex;
   justify-content: center;
 }
@@ -120,7 +120,7 @@ button {
 }
 #fixed-message {
   position: absolute;         /* ← 他の要素と独立配置 */
-  bottom: 5vh;     /* メッセージの位置 */
+  bottom: 2vh;     /* メッセージの位置 */
   left: 50%;                  /* ← 中央揃え */
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.6);  /* 半透明の黒背景 */
@@ -144,7 +144,7 @@ button {
 }
 #click-indicator {
   position: absolute;
-  bottom: 11vh;      /* ●●●の位置調整 */ 
+  bottom: 8vh;      /* ●●●の位置調整 */ 
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;

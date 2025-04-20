@@ -1,5 +1,11 @@
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   margin: 0;
+  padding: 0;
+  overflow: hidden; /* ← スクロールを防ぐ */
   background-image: url("img/papuru-Back-1.png");
   background-size: cover;    /* PC・スマホ対応 */
   background-repeat: no-repeat;
@@ -145,4 +151,4 @@ button {
   color: yellow;
   font-family: "Rounded M+ 1c", "Meiryo", sans-serif;
 }
-/*148/
+/*154/
